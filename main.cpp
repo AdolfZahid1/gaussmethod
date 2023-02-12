@@ -92,7 +92,7 @@ void check(vector<vector<double>> A, vector<double> B, vector<double> X){
     cout <<"Source system:"<<endl;
     for (int cons = 0; cons < B.size(); cons++ ){
         for (int i = 0; i < B.size();i++){
-            cout <<A1[cons][i] << " * (x"<< i+1<< ")" << Round(X1[i]) << "\t" ;
+            cout <<A1[cons][i] << " * (x"<<cons+1<< i+1<< ")" << Round(X1[i]) << "\t" ;
         }
         cout << "=\t" << B[cons];
         cout << endl;
@@ -121,7 +121,7 @@ int main() {
     vector<double> B(n, 0);
     for (int row = 0; row < n; row++) {
         for (int col = 0; col < n; col++) {
-            cout << "Coefficient x" << col+1 << ":" ;
+            cout << "Coefficient x" << row+1 << col+1 << ":" ;
             cin >> A[row][col];
         }
         cout << "Constant "<< row+1 << ":";
